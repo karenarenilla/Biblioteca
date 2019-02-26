@@ -10,12 +10,13 @@ export default class {
     this.controller = controller;
     this.middleware = middleware;
 
-    app.route(`${version}/persona`)
+    app.route(`${version}/prestamo`)
     .get(this.controller.find)
     .post(this.middleware.validate.bind(this.middleware))
     .post(this.controller.create)
     .put(this.middleware.validate.bind(this.middleware))
     .put(this.controller.update)
+    .delete(this.middleware.validate.bind(this.middleware))
     .delete(this.controller.delete);
   }
 }

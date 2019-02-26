@@ -1,6 +1,6 @@
 import { prop, Typegoose } from "typegoose";
 
-class LibroSchema extends Typegoose {
+export class LibroSchema extends Typegoose {
   @prop() public name?: string;
   @prop() public categoria?: string;
   }
